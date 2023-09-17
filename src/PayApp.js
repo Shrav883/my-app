@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import spatula from './assets/spatula.jpg';
 import StripeContainer from './components/StripeContainer';
+import contributeImage from './public/contribute.png';
 
 function App() {
 	const [showItem, setShowItem] = useState(false);
@@ -12,9 +12,9 @@ function App() {
 				<StripeContainer />
 			) : (
 				<>
-					<h3>$10.00</h3>
-					<img src="./public/logo192.png" alt='Spatula' />
-					<button onClick={() => setShowItem(true)}>Purchase Spatula</button>
+					<h3>As much $ as you want</h3>
+					<img src={contributeImage} alt='Contribute' />
+					<button onClick={() => setShowItem(true)}>Contribute</button>
 				</>
 			)}
 		</div>
